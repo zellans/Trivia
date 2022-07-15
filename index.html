@@ -9,31 +9,31 @@
             document.addEventListener('DOMContentLoaded', function(){
                 let correct_button = document.querySelector("#correct");
                 let incorrect_buttons = document.querySelectorAll(".incorrect");
-                let message = document.querySelector("#message");
+                let log = document.querySelector("#log");
 
                 correct_button.addEventListener('click', function(){
                     correct_button.style.backgroundColor = "green";
-                    message.innerHTML = "Correct";
+                    log.innerHTML = "Correct";
                 })
                 for (let i = 0; i < incorrect_buttons.length; i++)
                 {
                     incorrect_buttons[i].addEventListener('click', function(){
                         incorrect_buttons[i].style.backgroundColor = "red";
-                        message.innerHTML = "Incorrect";
+                        log.innerHTML = "Incorrect";
                     })
                 }
                 document.querySelector("#free-button").addEventListener('click', function(){
                     let input = document.querySelector("input");
-                    let message_free = document.querySelector("#free-message");
+                    let log_free = document.querySelector("#free-log");
                     if (input.value == "Real Madrid")
                     {
                         input.style.color = "green";
-                        message_free.innerHTML = "Correct";
+                        log_free.innerHTML = "Correct";
                     }
                     else
                     {
                         input.style.color = "red";
-                        message_free.innerHTML = "Incorrect";
+                        log_free.innerHTML = "Incorrect";
                     }
                 })
             });
@@ -56,7 +56,7 @@
                 <button id = "correct">14 times</button>
                 <button class = "incorrect">did not win</button>
                 <button class = "incorrect">1 times</button>
-                <p id="message"></p>
+                <p id="log"></p>
             </div>
 
             <div class="section">
@@ -66,7 +66,7 @@
                 <h3>Who has won the Champions League the most times?</h3>
                 <input type="text">
                 <button id="free-button">Check Answer</button>
-                <p id="free-message"></p>
+                <p id="free-log"></p>
             </div>
         </div>
     </body>
